@@ -1,0 +1,8 @@
+<h2>Questions</h2>
+
+<ul>
+  <li><%= link_to "Create New Question", new_question_path %> </li> #allows us to create a new question remeber to put what you want the user to see and the path.
+<% @questions.each do |question| %>
+  <li><%= link_to question.title, question_path( question) %></li>
+<% end %>
+</ul>
